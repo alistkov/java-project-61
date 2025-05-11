@@ -25,6 +25,9 @@ public class App {
                 break;
             case EXIT_OPTION:
                 System.exit(0);
+                break;
+            default:
+                throw new IllegalStateException("Unexpected value: " + playerChoice);
         }
         sc.close();
     }

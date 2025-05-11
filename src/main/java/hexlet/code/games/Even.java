@@ -1,7 +1,5 @@
 package hexlet.code.games;
 
-import hexlet.code.Cli;
-
 import java.util.Random;
 import java.util.Scanner;
 
@@ -24,7 +22,9 @@ public class Even {
             var userAnswer = sc.next();
 
             if (!correctAnswer.equals(userAnswer)) {
-                System.out.println("'" + userAnswer + "'" + " is wrong answer ;(. Correct answer was " + "'" + correctAnswer + "'");
+                System.out.println(
+                    "'" + userAnswer + "'" + " is wrong answer ;(. Correct answer was " + "'" + correctAnswer + "'"
+                );
                 return;
             }
 
