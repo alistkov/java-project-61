@@ -5,6 +5,8 @@ import java.util.Scanner;
 
 
 public class Even {
+    private static final Random RANDOM = new Random();
+
     public static void startGame(Scanner sc) {
         var steps = 3;
         System.out.println("Welcome to the Brain Games!");
@@ -37,8 +39,7 @@ public class Even {
     }
 
     private static int generateNumber() {
-        var rnd = new Random();
-        return rnd.nextInt(1, 100);
+        return RANDOM.nextInt(1, 100);
     }
 
     private static boolean isEven(int number) {
