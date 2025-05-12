@@ -1,11 +1,11 @@
 package hexlet.code.games;
 
-import java.util.Random;
+import hexlet.code.Util;
+
 import java.util.Scanner;
 
 
 public class Even {
-    private static final Random RANDOM = new Random();
 
     public static void startGame(Scanner sc) {
         var steps = 3;
@@ -16,8 +16,8 @@ public class Even {
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
 
         while (steps > 0) {
-            var number = generateNumber();
-            var correctAnswer = isEven(number) ? "yes" : "no";
+            var number = Util.generateRandomNumber(1, 100);
+            var correctAnswer = Util.isEven(number) ? "yes" : "no";
 
             System.out.println("Question: " + number);
             System.out.print("Your answer: ");
@@ -36,13 +36,5 @@ public class Even {
         }
 
         System.out.println("Congratulations, " + name + "!");
-    }
-
-    private static int generateNumber() {
-        return RANDOM.nextInt(1, 100);
-    }
-
-    private static boolean isEven(int number) {
-        return number % 2 == 0;
     }
 }
