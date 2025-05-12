@@ -5,9 +5,9 @@ import hexlet.code.games.Even;
 import java.util.Scanner;
 
 public class App {
+    private static final int EXIT_OPTION = 0;
     private static final int GREETING_OPTION = 1;
     private static final int EVEN_GAME = 2;
-    private static final int EXIT_OPTION = 0;
 
     public static void main(String[] args) {
         displayMenu();
@@ -21,7 +21,7 @@ public class App {
                 Cli.greeting(sc);
                 break;
             case EVEN_GAME:
-                Even.startGame(sc);
+                Even.startGame();
                 break;
             case EXIT_OPTION:
                 System.exit(0);
