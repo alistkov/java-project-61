@@ -10,7 +10,7 @@ public class Even {
     public static void startGame() {
         var gameData = new String[3][2];
 
-        for (var i = 0; i < 3; i++) {
+        for (var i = 0; i < ROUNDS; i++) {
             var question = Util.generateRandomNumber(1, 100);
             var correctAnswer = Util.isEven(question) ? "yes" : "no";
             gameData[i] = new String[] {String.valueOf(question), correctAnswer};
