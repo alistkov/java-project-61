@@ -12,4 +12,17 @@ public class Util {
     public static boolean isEven(int number) {
         return number % 2 == 0;
     }
+
+    public static int calculate(int firstNumber, int secondNumber, String operation) {
+        switch (operation) {
+            case "+":
+                return firstNumber + secondNumber;
+            case "-":
+                return firstNumber - secondNumber;
+            case "*":
+                return firstNumber * secondNumber;
+            default:
+                throw new ArithmeticException();
+        }
+    }
 }
