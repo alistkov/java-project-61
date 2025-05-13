@@ -25,4 +25,11 @@ public class Util {
                 throw new ArithmeticException();
         }
     }
+
+    public static int getGreatestCommonDivisor(int firstNumber, int secondNumber) {
+        if (secondNumber == 0) {
+            return firstNumber;
+        }
+        return getGreatestCommonDivisor(secondNumber, firstNumber % secondNumber);
+    }
 }
