@@ -1,5 +1,7 @@
 package hexlet.code;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
 
 public class Util {
@@ -31,5 +33,28 @@ public class Util {
             return firstNumber;
         }
         return getGreatestCommonDivisor(secondNumber, firstNumber % secondNumber);
+    }
+
+    public static Map<String, String> generateProgression() {
+        var progressionLength = Util.generateRandomNumber(5, 10);
+        var missingIndex = Util.generateRandomNumber(0, progressionLength - 1);
+        var startElement = Util.generateRandomNumber(5, 10);
+        var step = Util.generateRandomNumber(2, 10);
+        var map = new HashMap<String, String>();
+        var progression = new String[progressionLength];
+
+
+        for (var i = 0; i < progressionLength; i++) {
+            var value = startElement + step * i;
+            progression[i] = String.valueOf(value);
+        }
+
+        var missingElement = progression[missingIndex];
+        progression[missingIndex] = "..";
+
+        map.put("progression", String.join(" ", progression));
+        map.put("missingElement", missingElement);
+
+        return map;
     }
 }
