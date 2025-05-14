@@ -4,7 +4,7 @@ import hexlet.code.Engine;
 import hexlet.code.Util;
 
 public class Progression {
-    private static final String RULES = "Please enter the game number and press Enter.";
+    private static final String RULES = "What number is missing in the progression?";
     public static final int ROUNDS = 3;
 
     public static void startGame() {
