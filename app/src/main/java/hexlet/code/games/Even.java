@@ -5,9 +5,9 @@ import hexlet.code.Util;
 import static hexlet.code.Engine.ROUNDS;
 
 public class Even {
-    public static final String RULES = "Answer 'yes' if the number is even, otherwise answer 'no'.";
-    public static final int MIN = 2;
-    public static final int MAX = 100;
+    private static final String RULES = "Answer 'yes' if the number is even, otherwise answer 'no'.";
+    private static final int MIN = 2;
+    private static final int MAX = 100;
 
     public static void startGame() {
         var gameData = new String[ROUNDS][2];
@@ -17,10 +17,10 @@ public class Even {
             var correctAnswer = isEven(question) ? "yes" : "no";
             gameData[i] = new String[] {String.valueOf(question), correctAnswer};
         }
-        Engine.startGame(RULES, gameData, ROUNDS);
+        Engine.startGame(RULES, gameData);
     }
 
-    public static boolean isEven(int number) {
+    private static boolean isEven(int number) {
         return number % 2 == 0;
     }
 }
