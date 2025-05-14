@@ -23,10 +23,10 @@ public class Calc {
             var correctAnswer = calculate(firstNumber, secondNumber, operation);
             gameData[i] = new String[] {question, String.valueOf(correctAnswer)};
         }
-        Engine.startGame(RULES, gameData, ROUNDS);
+        Engine.startGame(RULES, gameData);
     }
 
-    public static int calculate(int firstNumber, int secondNumber, String operation) {
+    private static int calculate(int firstNumber, int secondNumber, String operation) {
         return switch (operation) {
             case "+" -> firstNumber + secondNumber;
             case "-" -> firstNumber - secondNumber;
