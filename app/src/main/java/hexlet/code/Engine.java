@@ -6,14 +6,14 @@ public class Engine {
     public static final Scanner SCANNER = new Scanner(System.in);
     public static final int ROUNDS = 3;
 
-    public static void startGame(String rules, String[][] gameData, int rounds) {
+    public static void startGame(String rules, String[][] gameData) {
         System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");
         var name = SCANNER.next();
         System.out.println("Hello, " + name + "!");
         System.out.println(rules);
 
-        for (var i = 0; i < rounds; i++) {
+        for (var i = 0; i < ROUNDS; i++) {
             var currentStep = gameData[i];
             var question = currentStep[0];
             var correctAnswer = currentStep[1];
@@ -31,7 +31,6 @@ public class Engine {
             }
             System.out.println("Correct!");
         }
-
         System.out.println("Congratulations, " + name + "!");
     }
 }
