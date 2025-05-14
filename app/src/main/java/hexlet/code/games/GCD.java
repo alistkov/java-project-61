@@ -2,21 +2,23 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 import hexlet.code.Util;
+import static hexlet.code.Engine.ROUNDS;
 
 public class GCD {
     private static final String RULES = "Find the greatest common divisor of given numbers.";
-    public static final int ROUNDS = 3;
+    private static final int MIN = 1;
+    private static final int MAX = 20;
 
     public static void startGame() {
         var gameData = new String[3][2];
 
         for (var i = 0; i < ROUNDS; i++) {
-            var firstNumber = Util.generateRandomNumber(1, 20);
-            var secondNumber = Util.generateRandomNumber(1, 20);
+            var firstNumber = Util.generateRandomNumber(MIN, MAX);
+            var secondNumber = Util.generateRandomNumber(MIN, MAX);
             var question = firstNumber + " " + secondNumber;
             var correctAnswer = Util.getGreatestCommonDivisor(firstNumber, secondNumber);
             gameData[i] = new String[] {question, String.valueOf(correctAnswer)};
         }
-        Engine.startGame(RULES, gameData, ROUNDS);
+        Engine.startGame(RULES, gameData);
     }
 }
