@@ -11,19 +11,6 @@ public class Util {
         return RANDOM.nextInt(min, max);
     }
 
-    public static int calculate(int firstNumber, int secondNumber, String operation) {
-        switch (operation) {
-            case "+":
-                return firstNumber + secondNumber;
-            case "-":
-                return firstNumber - secondNumber;
-            case "*":
-                return firstNumber * secondNumber;
-            default:
-                throw new ArithmeticException();
-        }
-    }
-
     public static int getGreatestCommonDivisor(int firstNumber, int secondNumber) {
         if (secondNumber == 0) {
             return firstNumber;
