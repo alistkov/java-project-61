@@ -43,7 +43,6 @@ public class Util {
         var map = new HashMap<String, String>();
         var progression = new String[progressionLength];
 
-
         for (var i = 0; i < progressionLength; i++) {
             var value = startElement + step * i;
             progression[i] = String.valueOf(value);
@@ -56,5 +55,18 @@ public class Util {
         map.put("missingElement", missingElement);
 
         return map;
+    }
+
+    public static boolean isPrime(int number) {
+        if (number <= 1) {
+            return false;
+        }
+
+        for (var i = 2; i < number; i += 1) {
+            if (number % i == 0) {
+                return false;
+            }
+        }
+        return true;
     }
 }
