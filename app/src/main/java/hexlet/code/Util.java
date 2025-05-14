@@ -8,11 +8,4 @@ public class Util {
     public static int generateRandomNumber(int min, int max) {
         return RANDOM.nextInt(min, max);
     }
-
-    public static int getGreatestCommonDivisor(int firstNumber, int secondNumber) {
-        if (secondNumber == 0) {
-            return firstNumber;
-        }
-        return getGreatestCommonDivisor(secondNumber, firstNumber % secondNumber);
-    }
 }

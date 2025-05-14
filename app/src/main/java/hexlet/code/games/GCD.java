@@ -16,9 +16,16 @@ public class GCD {
             var firstNumber = Util.generateRandomNumber(MIN, MAX);
             var secondNumber = Util.generateRandomNumber(MIN, MAX);
             var question = firstNumber + " " + secondNumber;
-            var correctAnswer = Util.getGreatestCommonDivisor(firstNumber, secondNumber);
+            var correctAnswer = getGreatestCommonDivisor(firstNumber, secondNumber);
             gameData[i] = new String[] {question, String.valueOf(correctAnswer)};
         }
         Engine.startGame(RULES, gameData);
+    }
+
+    private static int getGreatestCommonDivisor(int firstNumber, int secondNumber) {
+        if (secondNumber == 0) {
+            return firstNumber;
+        }
+        return getGreatestCommonDivisor(secondNumber, firstNumber % secondNumber);
     }
 }
