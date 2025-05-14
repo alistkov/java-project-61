@@ -39,17 +39,4 @@ public class Util {
 
         return map;
     }
-
-    public static boolean isPrime(int number) {
-        if (number <= 1) {
-            return false;
-        }
-
-        for (var i = 2; i < number; i += 1) {
-            if (number % i == 0) {
-                return false;
-            }
-        }
-        return true;
-    }
 }
