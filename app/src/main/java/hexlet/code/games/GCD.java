@@ -10,7 +10,7 @@ public class GCD {
     private static final int MAX = 20;
 
     public static void startGame() {
-        var gameData = new String[3][2];
+        var gameData = new String[ROUNDS][2];
 
         for (var i = 0; i < ROUNDS; i++) {
             var firstNumber = Util.generateRandomNumber(MIN, MAX);
