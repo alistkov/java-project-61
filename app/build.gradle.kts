@@ -1,5 +1,5 @@
 plugins {
-    id("java")
+    application
     id("io.github.ben-manes.versions") version "0.61.0"
 }
 
@@ -11,3 +11,5 @@ repositories {
 }
 
 dependencies {}
+
+application { mainClass.set("hexlet.code.App") }
