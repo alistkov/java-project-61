@@ -8,9 +8,12 @@ public class Even {
             "Answer 'yes' if the number is even, otherwise answer 'no'.";
 
     public static void run() {
-        var gameData = new String[GameEngine.ROUNDS][2];
-        for (var i = 0; i < GameEngine.ROUNDS; i += 1) {
-            var question = Utils.generateRandomNumber(2, 100);
+        var roundsCount = GameEngine.getRoundsCount();
+        var gameData = new String[roundsCount][2];
+        for (var i = 0; i < roundsCount; i += 1) {
+            var question =
+                    Utils.generateRandomNumber(
+                            GameEngine.getMinRandomNumber(), GameEngine.getMaxRandomNumber());
             var answer = isEven(question) ? "yes" : "no";
             gameData[i] = new String[] {String.valueOf(question), answer};
         }
