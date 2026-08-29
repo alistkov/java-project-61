@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class GameEngine {
     public static final int ROUNDS = 3;
+    public static final int QUESTION_INDEX = 0;
+    public static final int ANSWER_INDEX = 1;
 
     public static void run(String rules, String[][] gameData) {
         System.out.println("Welcome to the Brain Games!");
@@ -12,14 +14,16 @@ public class GameEngine {
         var name = sc.next();
         System.out.println("Hello, %s!".formatted(name));
         System.out.println(rules);
-        for (var round: gameData) {
-            var question = round[0];
-            var answer = round[1];
+        for (var round : gameData) {
+            var question = round[QUESTION_INDEX];
+            var answer = round[ANSWER_INDEX];
             System.out.println("Question %s".formatted(question));
             System.out.print("Your answer: ");
             var userAnswer = sc.next();
             if (!answer.equals(userAnswer)) {
-                System.out.printf("'%s' is wrong answer ;(. Correct answer was '%s'.".formatted(userAnswer, answer));
+                System.out.printf(
+                        "'%s' is wrong answer ;(. Correct answer was '%s'."
+                                .formatted(userAnswer, answer));
                 System.out.printf("Let's try again, %s!".formatted(name));
                 return;
             }
