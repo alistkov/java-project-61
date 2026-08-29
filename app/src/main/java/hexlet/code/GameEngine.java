@@ -3,9 +3,11 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class GameEngine {
-    public static final int ROUNDS = 3;
-    public static final int QUESTION_INDEX = 0;
-    public static final int ANSWER_INDEX = 1;
+    private static final int ROUNDS = 3;
+    private static final int QUESTION_INDEX = 0;
+    private static final int ANSWER_INDEX = 1;
+    private static final int MIN_RANDOM_NUMBER = 2;
+    private static final int MAX_RANDOM_NUMBER = 50;
 
     public static void run(String rules, String[][] gameData) {
         System.out.println("Welcome to the Brain Games!");
@@ -33,5 +35,17 @@ public class GameEngine {
         System.out.printf("Congratulations, %s!".formatted(name));
 
         sc.close();
+    }
+
+    public static int getRoundsCount() {
+        return ROUNDS;
+    }
+
+    public static int getMinRandomNumber() {
+        return MIN_RANDOM_NUMBER;
+    }
+
+    public static int getMaxRandomNumber() {
+        return MAX_RANDOM_NUMBER;
     }
 }
