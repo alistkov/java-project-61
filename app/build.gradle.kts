@@ -1,6 +1,7 @@
 plugins {
     application
     id("io.github.ben-manes.versions") version "0.61.0"
+    id("com.diffplug.spotless") version "8.10.1"
 }
 
 group = "hexlet.code"
@@ -16,4 +17,14 @@ application { mainClass.set("hexlet.code.App") }
 
 tasks.getByName("run", JavaExec::class) {
     standardInput = System.`in`
+}
+
+spotless {
+    java {
+        importOrder()
+        removeUnusedImports()
+        googleJavaFormat().aosp()
+        formatAnnotations()
+        leadingTabsToSpaces(4)
+    }
 }
