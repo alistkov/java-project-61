@@ -5,6 +5,9 @@
 ## Even game
 [![asciicast](https://asciinema.org/a/qb6SL75dFj3HfOny.svg)](https://asciinema.org/a/qb6SL75dFj3HfOny)
 
+## Calc game
+[![asciicast](https://asciinema.org/a/1tmv2zl4qDz8WiwC.svg)](https://asciinema.org/a/1tmv2zl4qDz8WiwC)
+
 ## Установка
 
 <!-- Опишите установку: клонирование, зависимости, переменные окружения -->
