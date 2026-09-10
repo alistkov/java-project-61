@@ -1,8 +1,8 @@
 package hexlet.code.games;
 
 import hexlet.code.GameEngine;
-import hexlet.code.utils.Utils;
 import hexlet.code.utils.Operations;
+import hexlet.code.utils.Utils;
 
 public class Calc {
     private static final String RULES = "What is the result of the expression?";
