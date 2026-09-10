@@ -1,7 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.GameEngine;
-import hexlet.code.Utils;
+import hexlet.code.utils.Utils;
 
 public class Even {
     private static final String RULES =
