@@ -11,14 +11,12 @@ public class Gcd {
         var gameData = new String[roundsCount][2];
 
         for (var i = 0; i < roundsCount; i += 1) {
-            var firstNumber = Utils.generateRandomNumber(
-                    GameEngine.getMinRandomNumber(),
-                    GameEngine.getMaxRandomNumber()
-            );
-            var secondNumber = Utils.generateRandomNumber(
-                    GameEngine.getMinRandomNumber(),
-                    GameEngine.getMaxRandomNumber()
-            );
+            var firstNumber =
+                    Utils.generateRandomNumber(
+                            GameEngine.getMinRandomNumber(), GameEngine.getMaxRandomNumber());
+            var secondNumber =
+                    Utils.generateRandomNumber(
+                            GameEngine.getMinRandomNumber(), GameEngine.getMaxRandomNumber());
 
             var question = String.format("%d %d", firstNumber, secondNumber);
             var answer = getGreatestCommonDivisor(firstNumber, secondNumber);
