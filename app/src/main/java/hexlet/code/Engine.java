@@ -19,21 +19,26 @@ public class Engine {
             var question = round[Constants.QUESTION_INDEX];
             var answer = round[Constants.ANSWER_INDEX];
 
-            System.out.printf("Question: %s%n", question);
+            System.out.println("Question: " + question);
             System.out.print("Your answer: ");
             var userAnswer = sc.next();
 
             if (!answer.equals(userAnswer)) {
-                System.out.printf(
-                        "'%s' is wrong answer ;(. Correct answer was '%s'."
-                                .formatted(userAnswer, answer));
-                System.out.printf("Let's try again, %s!".formatted(name));
+                System.out.println(
+                        "'"
+                                + userAnswer
+                                + "'"
+                                + " is wrong answer ;(. Correct answer was "
+                                + "'"
+                                + answer
+                                + "'");
+                System.out.println("Let's try again, " + name + "!");
                 return;
             }
             System.out.println("Correct!");
         }
 
-        System.out.printf("Congratulations, %s!".formatted(name));
+        System.out.println("Congratulations, " + name + "!");
 
         sc.close();
     }
