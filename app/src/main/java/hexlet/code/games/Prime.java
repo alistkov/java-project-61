@@ -5,7 +5,8 @@ import hexlet.code.utils.Constants;
 import hexlet.code.utils.Utils;
 
 public class Prime {
-    private static final String RULES = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+    private static final String RULES =
+            "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
     public static void run() {
         var roundsCount = Constants.ROUNDS;
@@ -17,7 +18,9 @@ public class Prime {
     }
 
     private static String[] generateQuestionData() {
-        var question = Utils.generateRandomNumber(Constants.MIN_RANDOM_NUMBER, Constants.MAX_RANDOM_NUMBER);
+        var question =
+                Utils.generateRandomNumber(
+                        Constants.MIN_RANDOM_NUMBER, Constants.MAX_RANDOM_NUMBER);
         var answer = isPrime(question) ? "yes" : "no";
         return new String[] {String.valueOf(question), answer};
     }
