@@ -1,6 +1,7 @@
 package hexlet.code.games;
 
-import hexlet.code.GameEngine;
+import hexlet.code.Engine;
+import hexlet.code.utils.Constants;
 import hexlet.code.utils.Utils;
 
 public class Progression {
@@ -11,17 +12,21 @@ public class Progression {
     private static final int PROGRESS_MAX_VALUE = 10;
 
     public static void run() {
-        var roundsCount = GameEngine.getRoundsCount();
+        var roundsCount = Constants.ROUNDS;
         var gameData = new String[roundsCount][2];
         for (var i = 0; i < roundsCount; i += 1) {
-            var progression = generateProgression();
-            var missedIndex = Utils.generateRandomNumber(0, progression.length);
-            var answer = progression[missedIndex];
-            progression[missedIndex] = "..";
-            var question = String.join(" ", progression);
-            gameData[i] = new String[] {question, answer};
+            gameData[i] = generateQuestionData();
         }
-        GameEngine.run(RULES, gameData);
+        Engine.run(RULES, gameData);
+    }
+
+    private static String[] generateQuestionData() {
+        var progression = generateProgression();
+        var missedIndex = Utils.generateRandomNumber(0, progression.length);
+        var answer = progression[missedIndex];
+        progression[missedIndex] = "..";
+        var question = String.join(" ", progression);
+        return new String[] {question, answer};
     }
 
     private static String[] generateProgression() {
