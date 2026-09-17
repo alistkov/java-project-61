@@ -1,9 +1,7 @@
 package hexlet.code;
 
-import hexlet.code.games.Calc;
-import hexlet.code.games.Even;
-import hexlet.code.games.Gcd;
-import hexlet.code.games.Progression;
+import hexlet.code.games.*;
+
 import java.util.Scanner;
 
 public class App {
@@ -13,6 +11,7 @@ public class App {
     private static final String CALC_GAME = "3";
     private static final String GCD_GAME = "4";
     private static final String PROGRESSION_GAME = "5";
+    private static final String PRIME_GAME = "6";
 
     public static void main(String[] args) {
         System.out.println("Please enter the game number and press Enter.");
@@ -23,6 +22,7 @@ public class App {
                     3 - Calc
                     4 - GCD
                     5 - Progression
+                    6 - Prime
                     0 - Exit
                 """);
         System.out.print("Your choice: ");
@@ -37,6 +37,7 @@ public class App {
             case CALC_GAME -> Calc.run();
             case GCD_GAME -> Gcd.run();
             case PROGRESSION_GAME -> Progression.run();
+            case PRIME_GAME -> Prime.run();
             default -> System.out.println("Unexpected selection.");
         }
         sc.close();
