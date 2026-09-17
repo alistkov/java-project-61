@@ -1,4 +1,5 @@
 package hexlet.code.games;
+
 import hexlet.code.GameEngine;
 import hexlet.code.utils.Utils;
 
@@ -8,7 +9,6 @@ public class Progression {
     private static final int PROGRESS_MAX_LENGTH = 10;
     private static final int PROGRESS_MIN_VALUE = 2;
     private static final int PROGRESS_MAX_VALUE = 10;
-
 
     public static void run() {
         var roundsCount = GameEngine.getRoundsCount();
@@ -27,7 +27,8 @@ public class Progression {
     private static String[] generateProgression() {
         var startNumber = Utils.generateRandomNumber(PROGRESS_MIN_VALUE, PROGRESS_MAX_VALUE);
         var step = Utils.generateRandomNumber(PROGRESS_MIN_VALUE, PROGRESS_MAX_VALUE);
-        var progressionLength = Utils.generateRandomNumber(PROGRESS_MIN_LENGTH, PROGRESS_MAX_LENGTH + 1);
+        var progressionLength =
+                Utils.generateRandomNumber(PROGRESS_MIN_LENGTH, PROGRESS_MAX_LENGTH + 1);
         var progression = new String[progressionLength];
 
         for (var i = 0; i < progressionLength; i += 1) {
