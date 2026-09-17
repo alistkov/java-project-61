@@ -8,15 +8,18 @@ public class Engine {
     public static void run(String rules, String[][] gameData) {
         System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name?: ");
+
         var sc = new Scanner(System.in);
         var name = sc.next();
-        System.out.println("Hello, %s!".formatted(name));
+
+        System.out.printf("Hello, %s!%n", name);
         System.out.println(rules);
+
         for (var round : gameData) {
             var question = round[Constants.QUESTION_INDEX];
             var answer = round[Constants.ANSWER_INDEX];
 
-            System.out.println("Question %s".formatted(question));
+            System.out.printf("Question %s%n", question);
             System.out.print("Your answer: ");
             var userAnswer = sc.next();
 
