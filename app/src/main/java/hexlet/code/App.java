@@ -2,6 +2,7 @@ package hexlet.code;
 
 import hexlet.code.games.Calc;
 import hexlet.code.games.Even;
+import hexlet.code.games.Gcd;
 import java.util.Scanner;
 
 public class App {
@@ -9,15 +10,17 @@ public class App {
     private static final String GREETING_OPTION = "1";
     private static final String EVEN_GAME = "2";
     private static final String CALC_GAME = "3";
+    private static final String GCD_GAME = "4";
 
     public static void main(String[] args) {
         System.out.println("Please enter the game number and press Enter.");
         System.out.println(
                 """
-                    0 - Exit
                     1 - Greet
                     2 - Even
                     3 - Calc
+                    4 - GCD
+                    0 - Exit
                 """);
         System.out.print("Your choice: ");
 
@@ -29,6 +32,7 @@ public class App {
             case GREETING_OPTION -> Cli.run(sc);
             case EVEN_GAME -> Even.run();
             case CALC_GAME -> Calc.run();
+            case GCD_GAME -> Gcd.run();
             default -> System.out.println("Unexpected selection.");
         }
         sc.close();

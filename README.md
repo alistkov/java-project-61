@@ -8,6 +8,9 @@
 ## Calc game
 [![asciicast](https://asciinema.org/a/1tmv2zl4qDz8WiwC.svg)](https://asciinema.org/a/1tmv2zl4qDz8WiwC)
 
+## GCD game
+[![asciicast](https://asciinema.org/a/pMjUSSCqTndi99Sk.svg)](https://asciinema.org/a/pMjUSSCqTndi99Sk)
+
 ## Установка
 
 <!-- Опишите установку: клонирование, зависимости, переменные окружения -->
