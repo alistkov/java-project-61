@@ -11,6 +11,9 @@
 ## GCD game
 [![asciicast](https://asciinema.org/a/pMjUSSCqTndi99Sk.svg)](https://asciinema.org/a/pMjUSSCqTndi99Sk)
 
+## Progression game
+[![asciicast](https://asciinema.org/a/FZLpBUBxQxXd8Sjr.svg)](https://asciinema.org/a/FZLpBUBxQxXd8Sjr)
+
 ## Установка
 
 <!-- Опишите установку: клонирование, зависимости, переменные окружения -->
