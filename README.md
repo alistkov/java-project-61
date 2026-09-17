@@ -14,6 +14,9 @@
 ## Progression game
 [![asciicast](https://asciinema.org/a/FZLpBUBxQxXd8Sjr.svg)](https://asciinema.org/a/FZLpBUBxQxXd8Sjr)
 
+## Prime game
+[![asciicast](https://asciinema.org/a/SQ9bY7fxnqHGPKSU.svg)](https://asciinema.org/a/SQ9bY7fxnqHGPKSU)
+
 ## Установка
 
 <!-- Опишите установку: клонирование, зависимости, переменные окружения -->
